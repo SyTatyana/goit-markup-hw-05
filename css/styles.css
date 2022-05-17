@@ -131,6 +131,23 @@ ul {
 ul{
     list-style: none;
 }
+
+.current-page {
+    position: relative;
+    color: var(--selection-color);
+}
+
+.current-page::after {
+    position: absolute;
+    bottom: -34px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+}
+
 /*Hero*/
 .hero-section{
 max-height: 600px;
