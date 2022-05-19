@@ -50,6 +50,11 @@ ul {
     padding: 0 15px;
     margin: 0 auto;
 }
+button:hover,
+button:focus
+ {
+    cursor: pointer;
+}
 
 /*Header*/
 .header{
@@ -247,8 +252,9 @@ text-transform: uppercase;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%
+    border-radius: 50%;
 }
+
 
 /*Advantage*/
 .advantage-section{
@@ -313,6 +319,22 @@ letter-spacing: 0.03em;
 .list{
 display: flex;
 justify-content: space-between;
+}
+
+.activity{
+    position: relative;
+}
+.about-section-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: var(--primary-background-color);
+    background-color: rgba(47, 48, 58, 0.8);
 }
 /*Team*/
 .team{
@@ -419,8 +441,8 @@ margin-bottom: 16px;
     border-radius: 4px;
 
     transition-property: border-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
@@ -588,9 +610,11 @@ padding-bottom: 94px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-card:hover,
-.project-card:focus{
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.project-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project-card:hover .overlay {
+    bottom: 0;
 }
 .card-description {
     border-bottom: 1px solid #EEEEEE;
@@ -615,7 +639,7 @@ padding-bottom: 94px;
     height: 294px;
     font-size: 18px;
     line-height: 1.5;
-    color: var(--background-color);
+    color: var(--primary-background-color);
     background-color: rgba(33, 150, 243, 0.9);
 
     transition-property: bottom;
