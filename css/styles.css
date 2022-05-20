@@ -131,6 +131,7 @@ button:focus
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--primary-text-color);
 }
 .nav-link,
 .contact-link {
@@ -148,7 +149,7 @@ ul{
 
 .current-page {
     position: relative;
-    color: var(--selection-color);
+    color: var(--accent-color);
 }
 
 .current-page::after {
@@ -221,8 +222,7 @@ text-transform: uppercase;
     
     transition-property: opacity;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -233,12 +233,12 @@ text-transform: uppercase;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
 
     width: 528px;
     height: 581px;
     background-color: var(--primary-background-color);
-
+    
 }
 .modal-close {
     position: absolute;
@@ -253,6 +253,9 @@ text-transform: uppercase;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -338,7 +341,7 @@ justify-content: space-between;
 }
 /*Team*/
 .team{
-    background-color: var(--primary-background-color);
+    background-color: var(--quaternary-background-color);
 
     text-align: center;
     padding-top: 94px;
@@ -368,7 +371,7 @@ display: flex;
 .team .item{
     background-color: var(--primary-background-color);
     border-radius: 0px 0px 4px 4px;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-member-occupation{
 color: var(--primary-text-color);
